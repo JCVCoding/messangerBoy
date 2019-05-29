@@ -1,0 +1,25 @@
+.background-top {
+    background: url("../../images/header-image.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 80%;
+    height: 100vh;
+}
+
+.overlay {
+    background: rgba(50, 55, 55, 0.71);
+    height: inherit;
+}
+
+.background-bottom {
+    background: url("../../images/bottom-image.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 60%;
+    height: 20vh;
+}
+
+.customers {
+    margin: 3rem 0;
+    font-size: 1.5rem;
+}

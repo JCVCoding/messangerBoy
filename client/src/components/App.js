@@ -5,7 +5,7 @@ import * as actions from "../actions";
 
 import Header from "./Header";
 import Landing from "./Landing";
-import Dashboard from './Dashboard';
+import Dashboard from "./Dashboard";
 import SurveyNew from "./surveys/SurveyNew";
 
 class App extends React.Component {
@@ -15,13 +15,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div>
         <BrowserRouter>
+          <Header />
           <div>
-            <Header />
-            <Route path="/" component={Landing} exact />
-            <Route path="/surveys" component={Dashboard} exact />
-            <Route path="/surveys/new" component={SurveyNew} />
+            <div>
+              <Route path="/" component={Landing} exact />
+              <Route path="/surveys" component={Dashboard} exact />
+              <Route path="/surveys/new" component={SurveyNew} />
+            </div>
           </div>
         </BrowserRouter>
       </div>
