@@ -1,4 +1,14 @@
-.nav-wrapper {
-    width: 70vw;
-    text-align: center;
+
+@media (min-width: 900px) {
+    .nav-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        max-width: 1500px;
+    }
+
+    .nav-links {
+        width: 300px;
+    }
 }
