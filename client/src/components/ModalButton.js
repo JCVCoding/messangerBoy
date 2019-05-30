@@ -22,36 +22,32 @@ class ModalButton extends Component {
       case false:
         return (
           <li>
-            <a
-              className="modal-trigger"
-              href="#login"
-              id="login-btn"
-            >
+            <a className="modal-trigger" href="#login" id="login-btn">
               Sign In
             </a>
           </li>
         );
       default:
-        return [
-          <li key="1">
-            <Payments />
-          </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
-            Credits: {this.props.auth.credits}
-          </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
-          </li>
-        ];
+        return (
+          <div>
+            <li key="1">
+              <Payments />
+            </li>
+
+            <li key="3" style={{ margin: "0 10px" }}>
+              Credits: {this.props.auth.credits}
+            </li>
+
+            <li key="2">
+              <a href="/api/logout">Logout</a>
+            </li>
+          </div>
+        );
     }
   }
 
   render() {
-    return (
-      <div>
-        {this.renderButton()}
-      </div>
-    );
+    return <div>{this.renderButton()}</div>;
   }
 }
 

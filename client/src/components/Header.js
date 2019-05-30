@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { Link as LinkScroll } from "react-scroll";
-import Payments from "./Payments";
 import "./styles/header.css";
 import M from "materialize-css";
 
@@ -19,31 +18,6 @@ class Header extends Component {
       let elems = document.querySelectorAll(".sidenav");
        M.Sidenav.init(elems);
     });
-  }
-
-  renderContent() {
-    switch (this.props.auth) {
-      case null:
-        return;
-      case false:
-        return (
-          <div>
-            <a href="/auth/google">Sign In</a>
-          </div>
-        );
-      default:
-        return [
-          <li key="1">
-            <Payments />
-          </li>,
-          <li key="3" style={{ margin: "0 10px" }}>
-            Credits: {this.props.auth.credits}
-          </li>,
-          <li key="2">
-            <a href="/api/logout">Logout</a>
-          </li>
-        ];
-    }
   }
 
   render() {
@@ -80,7 +54,7 @@ class Header extends Component {
 
         <ModalContent />
 
-        <div className="hide-on-large-only">
+        <div>
           <ul className="sidenav" id="slide-out">
             <li>
               <LinkScroll className="sidenav-close" to="about" smooth={true}>

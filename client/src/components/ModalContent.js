@@ -21,7 +21,7 @@ class ModalContent extends Component {
             <div className="section">
               <a
                 href="/auth/facebook"
-                className="modal-close btn indigo accent-3 social disabled"
+                className="modal-close btn indigo accent-3 social"
               >
                 <i className="fab fa-facebook-f" />
               </a>

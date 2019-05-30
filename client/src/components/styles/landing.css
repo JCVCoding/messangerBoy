@@ -15,14 +15,6 @@
   height: inherit;
 }
 
-.background-bottom {
-  background: url("../../images/bottom-image.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 60%;
-  height: 20vh;
-}
-
 .customers {
   margin: 3rem 0;
 }
