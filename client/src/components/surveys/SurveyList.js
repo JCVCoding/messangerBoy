@@ -8,8 +8,12 @@ class SurveyList extends Component {
     this.props.fetchSurveys();
   }
 
-   renderSurveys() {
-    if (this.props.surveys.length >= 1) {
+  getSurveyLength() {
+    return this.props.surveys.length; 
+  }
+
+  renderSurveys() {
+    if ( this.getSurveyLength() >= 1) {
       return this.props.surveys.reverse().map(survey => {
         return (
           <div key={survey._id} className="row">
@@ -33,9 +37,11 @@ class SurveyList extends Component {
       });
     } else {
       return (
-        <div className="valign-wrapper message-container">
+        <div className="valign-wrapper">
           <div className="message-wrapper big active">
-            <p className="flow-text">Click the red button to create your first survey!</p>
+            <p className="flow-text">
+              Click the red button to create your first survey!
+            </p>
           </div>
         </div>
       );

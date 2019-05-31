@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./styles/landing.css";
 import { Link } from "react-scroll";
+import Footer from "./Footer";
 
 class Landing extends Component {
   render() {
@@ -133,6 +134,7 @@ class Landing extends Component {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }
