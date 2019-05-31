@@ -7,7 +7,7 @@ module.exports = {
     stripeSecretKey: process.env.STRIPE_SECRET_KEY,
     sendGridKey: process.env.SEND_GRID_KEY,
     redirectDomain: process.env.REDIRECT_DOMAIN,
-    facebookClientId: process.env.FACEBOOK_APP_ID,
+    facebookClientID: process.env.FACEBOOK_APP_ID,
     facebookClientSecret: process.env.FACEBOOK_APP_SECRET
 }
 
