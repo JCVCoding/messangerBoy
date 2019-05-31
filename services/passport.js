@@ -4,7 +4,6 @@ const FacebookStrategy = require("passport-facebook").Strategy;
 const TwitterStrategy = require("passport-twitter").Strategy;
 const mongoose = require("mongoose");
 const keys = require("../config/keys");
-const dev = require("../config/dev");
 
 const User = mongoose.model("users");
 
@@ -68,8 +67,8 @@ passport.use(
 passport.use(
   new TwitterStrategy(
     {
-      consumerKey: dev.twitterClientId,
-      consumerSecret: dev.twitterClientSecret,
+      consumerKey: keys.twitterClientId,
+      consumerSecret: keys.twitterClientSecret,
       callbackURL: "/auth/twitter/callback",
       proxy: true
     },
