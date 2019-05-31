@@ -16,7 +16,7 @@ class Header extends Component {
   renderSideNav() {
     document.addEventListener("DOMContentLoaded", function() {
       let elems = document.querySelectorAll(".sidenav");
-       M.Sidenav.init(elems);
+      M.Sidenav.init(elems);
     });
   }
 
@@ -35,6 +35,9 @@ class Header extends Component {
               <i className="material-icons">menu</i>
             </a>
             <ul className="right hide-on-med-and-down nav-links">
+              <li>
+                <Link className="sidenav-close" to={"/"}>Home</Link>
+              </li>
               <li>
                 <LinkScroll to="about" smooth={true}>
                   About
@@ -56,6 +59,9 @@ class Header extends Component {
 
         <div>
           <ul className="sidenav" id="slide-out">
+            <li>
+              <Link className="sidenav-close" to={"/"}>Home</Link>
+            </li>
             <li>
               <LinkScroll className="sidenav-close" to="about" smooth={true}>
                 About

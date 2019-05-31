@@ -1,0 +1,11 @@
+.row {
+    max-width: 50rem;
+}
+
+.message-container {
+    height: 100vh;
+}
+
+.message-wrapper {
+    margin: 0 auto;
+}

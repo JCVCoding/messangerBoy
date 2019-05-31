@@ -34,7 +34,7 @@ class ModalContent extends Component {
             <div className="section">
               <a
                 href="/auth/twitter"
-                className="modal-close btn social disabled"
+                className="modal-close btn social"
                 style={{ backgroundColor: "#1DA1F2" }}
               >
                 <i className="fab fa-twitter" />

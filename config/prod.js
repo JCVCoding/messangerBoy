@@ -8,6 +8,8 @@ module.exports = {
     sendGridKey: process.env.SEND_GRID_KEY,
     redirectDomain: process.env.REDIRECT_DOMAIN,
     facebookClientID: process.env.FACEBOOK_APP_ID,
-    facebookClientSecret: process.env.FACEBOOK_APP_SECRET
+    facebookClientSecret: process.env.FACEBOOK_APP_SECRET,
+    twitterClientId: process.env.TWITTER_CONSUMER_KEY,
+    twitterClientSecret: process.env.TWITTER_CONSUMER_SECRET
 }
 

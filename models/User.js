@@ -4,6 +4,7 @@ const { Schema } = mongoose;
 const userSchema = new Schema({
   googleID: String,
   facebookId: String,
+  twitterId: String,
   credits: {type: Number, default: 0}
 });
 

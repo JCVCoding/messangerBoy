@@ -34,7 +34,17 @@ module.exports = app => {
   );
 
   // TWITTER ROUTES
-  
+  app.get("/auth/twitter", passport.authenticate("twitter"));
+
+  app.get(
+    "/auth/twitter/callback",
+    passport.authenticate("twitter", { failureRedirect: "/" }),
+    (req, res) => {
+      res.redirect("/surveys");
+    }
+  );
+
+  //Logout and current user route
   app.get("/api/logout", (req, res) => {
     req.logout();
     res.redirect("/");
