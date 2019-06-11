@@ -75,7 +75,7 @@ class Landing extends Component {
           </div>
         </div>
 
-        <div className="section red lighten-2 white-text center-align">
+        <div className="section blue darken-4 white-text center-align">
           <h4>Empowering businesses with on demand survey data</h4>
         </div>
 

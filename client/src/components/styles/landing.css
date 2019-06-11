@@ -2,6 +2,10 @@
   width: 80vw;
 }
 
+.card {
+  height: 17.2rem;
+}
+
 .background-top {
   background: url("../../images/header-image.jpg");
   background-size: cover;

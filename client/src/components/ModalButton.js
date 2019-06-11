@@ -30,16 +30,17 @@ class ModalButton extends Component {
       default:
         return (
           <div>
-            <li key="1">
-              <Payments />
-            </li>
-
-            <li key="3" style={{ margin: "0 10px" }}>
-              Credits: {this.props.auth.credits}
+          
+            <li key="3">
+              <div className="credits-info" >Credits: {this.props.auth.credits}</div>
             </li>
 
             <li key="2">
               <a href="/api/logout">Logout</a>
+            </li>
+
+            <li key="1">
+              <Payments />
             </li>
           </div>
         );

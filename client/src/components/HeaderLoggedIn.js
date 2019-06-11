@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { Link as LinkScroll } from "react-scroll";
 import "./styles/header.css";
 import M from "materialize-css";
 
@@ -34,24 +33,12 @@ class Header extends Component {
             <a href="#!" data-target="slide-out" className="sidenav-trigger">
               <i className="material-icons">menu</i>
             </a>
-            <ul className="hide-on-med-and-down nav-links right">
+            <ul className="right hide-on-med-and-down nav-links">
               <li>
                 <Link className="sidenav-close" to={"/"}>
                   Home
                 </Link>
               </li>
-              <li>
-                <LinkScroll to="about" smooth={true}>
-                  About
-                </LinkScroll>
-              </li>
-
-              <li>
-                <LinkScroll to="contact" smooth={true}>
-                  Contact
-                </LinkScroll>
-              </li>
-
               <ModalButton />
             </ul>
           </div>
@@ -65,16 +52,6 @@ class Header extends Component {
               <Link className="sidenav-close" to={"/"}>
                 Home
               </Link>
-            </li>
-            <li>
-              <LinkScroll className="sidenav-close" to="about" smooth={true}>
-                About
-              </LinkScroll>
-            </li>
-            <li>
-              <LinkScroll className="sidenav-close" to="contact" smooth={true}>
-                Contact
-              </LinkScroll>
             </li>
             <ModalButton />
           </ul>
