@@ -20,7 +20,7 @@ class Header extends Component {
     });
   }
 
-  render() {
+  renderLandingHeader() {
     return (
       <div>
         <nav className="grey darken-3">
@@ -82,10 +82,62 @@ class Header extends Component {
       </div>
     );
   }
+
+  renderSurveyHeader() {
+    return (
+      <div>
+        <nav className="grey darken-3">
+          <div className="nav-wrapper">
+            <Link
+              to={this.props.auth ? "/surveys" : "/"}
+              className="brand-logo"
+            >
+              MessengerBoy
+            </Link>
+            <a href="#!" data-target="slide-out" className="sidenav-trigger">
+              <i className="material-icons">menu</i>
+            </a>
+            <ul className="right hide-on-med-and-down nav-links">
+              <li>
+                <Link className="sidenav-close" to={"/"}>
+                  Home
+                </Link>
+              </li>
+              <ModalButton />
+            </ul>
+          </div>
+        </nav>
+
+        <ModalContent />
+
+        <div>
+          <ul className="sidenav" id="slide-out">
+            <li>
+              <Link className="sidenav-close" to={"/"}>
+                Home
+              </Link>
+            </li>
+            <ModalButton />
+          </ul>
+        </div>
+      </div>
+    );
+  }
+
+  render() {
+    if (
+      this.props.location.pathname === "/surveys" ||
+      this.props.location.pathname === "/surveys/new"
+    ) {
+      return <div>{this.renderSurveyHeader()}</div>;
+    } else {
+      return <div>{this.renderLandingHeader()}</div>;
+    }
+  }
 }
 
-const mapStateToProps = ({ auth }) => {
-  return { auth };
+const mapStateToProps = props => {
+  return props;
 };
 
 export default connect(mapStateToProps)(Header);

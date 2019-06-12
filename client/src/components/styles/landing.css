@@ -39,3 +39,11 @@
 .card-landing {
   background-color: #008c95;
 }
+
+.landing-header {
+  font-weight: 600;
+}
+
+.landing-subheader {
+  font-weight: 400;
+}

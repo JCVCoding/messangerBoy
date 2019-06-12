@@ -12,8 +12,8 @@ class Landing extends Component {
             <div className="container">
               <div className="row white-text">
                 <div className="col s12 hero center-align">
-                  <h1>Bring your message to the world</h1>
-                  <p className="flow-text">
+                  <h1 className="landing-header">Bring your message to the world</h1>
+                  <p className="flow-text landing-subheader">
                     MessengerBoy makes sending emails and gathering survey data
                     easy.
                   </p>
