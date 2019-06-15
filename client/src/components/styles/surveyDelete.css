@@ -1,0 +1,17 @@
+.delete-wrapper {
+  margin-top: 10%;
+}
+
+@media (max-width: 600px) {
+  .delete-wrapper {
+    margin-top: 45%;
+  }
+}
+
+.yes-delete {
+  margin-right: 1rem;
+}
+
+.no-delete {
+  margin-left: 1rem;
+}
