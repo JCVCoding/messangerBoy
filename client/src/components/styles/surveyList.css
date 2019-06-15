@@ -1,7 +1,15 @@
 .row {
-    max-width: 70rem;
+  max-width: 70rem;
 }
 
 .message-wrapper {
-    margin: 0 auto;
+  margin: 0 auto;
+}
+
+.trashcan {
+  color: red;
+  position: relative;
+  float: right;
+  bottom: 10%;
+  right: 20px;
 }

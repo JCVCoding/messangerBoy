@@ -9,11 +9,11 @@ class SurveyList extends Component {
   }
 
   getSurveyLength() {
-    return this.props.surveys.length; 
+    return this.props.surveys.length;
   }
 
   renderSurveys() {
-    if ( this.getSurveyLength() >= 1) {
+    if (this.getSurveyLength() >= 1) {
       return this.props.surveys.reverse().map(survey => {
         return (
           <div key={survey._id} className="row">
@@ -30,6 +30,14 @@ class SurveyList extends Component {
                   <p>Yes: {survey.yes}</p>
                   <p>No: {survey.no}</p>
                 </div>
+                <a href={`/surveys/delete/${survey._id}`}>
+                  <i
+                    className="
+                  material-icons small trashcan"
+                  >
+                    delete
+                  </i>
+                </a>
               </div>
             </div>
           </div>
